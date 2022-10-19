@@ -1,10 +1,10 @@
 module Enumerable
   def my_inject(initial_value = 0)
-    sum = initial_value
+    cum_result = initial_value
 
-    my_each { |num| sum = yield(sum, num) }
+    my_each { |num| cum_result = yield(cum_result, num) }
 
-    sum
+    cum_result
   end
 
   def my_map
